@@ -1,4 +1,4 @@
-class IyteHashTable(){
+class IyteHashTable{
 
  
  case class node(var key:String,var value:String, var next: node)
