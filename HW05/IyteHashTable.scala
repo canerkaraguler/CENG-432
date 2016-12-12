@@ -38,7 +38,7 @@ var hashSize=10007
 	 var z:Int=index(key)
 		
 	
-	if(0<=counter&&counter<7000){
+	if(0<=counter&&counter<6000){
 			if(myTable(z)==null){
 			myTable(z) = new node(key,value,myTable(z))
 			last=myTable(z)
@@ -54,7 +54,7 @@ var hashSize=10007
 
 
 
-	}else if(7000<=counter&&counter<14000){
+	}else if(6000<=counter&&counter<12000){
 
 			if(myTable2(z)==null){
 			myTable2(z) = new node(key,value,myTable2(z))
@@ -71,7 +71,7 @@ var hashSize=10007
 		}
 
 
-	}else if(14000<=counter&&counter<21000){
+	}else if(12000<=counter&&counter<18000){
 
 			if(myTable3(z)==null){
 			myTable3(z) = new node(key,value,myTable3(z))
@@ -88,7 +88,7 @@ var hashSize=10007
 		}
 
 
-	}else if(21000<=counter){
+	}else if(18000<=counter){
 
 			if(myTable4(z)==null){
 			myTable4(z) = new node(key,value,myTable4(z))
@@ -120,13 +120,13 @@ var hashSize=10007
 	 var z=index(key)
 	
 	if(myTable(z)==null){
-		if(counter<7000){
+		if(counter<6000){
 		return null}else{
 		if(myTable2(z)==null){
-			if(counter<14000){
+			if(counter<1200){
 			return null}else{
 			if(myTable3(z)==null){
-				if(counter<21000){
+				if(counter<18000){
 				return null}else{
 				if(myTable4(z)==null){
 
