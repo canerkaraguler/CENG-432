@@ -5,14 +5,15 @@ class IyteHashTable{
   
   private var last: node = null
   private var counter=0;
+  var hashSize=502841
+  var counter_lim=251000
+var myTable:Array[node] =new Array[node](hashSize)
+var myTable2:Array[node] =new Array[node](hashSize)
+var myTable3:Array[node] =new Array[node](hashSize)
+var myTable4:Array[node] =new Array[node](hashSize)
 
-var myTable:Array[node] =new Array[node](10007)
-var myTable2:Array[node] =new Array[node](10007)
-var myTable3:Array[node] =new Array[node](10007)
-var myTable4:Array[node] =new Array[node](10007)
 
 
-var hashSize=10007
 
 	def mult(a:Int):Int={
 	var b=32
@@ -38,7 +39,7 @@ var hashSize=10007
 	 var z:Int=index(key)
 		
 	
-	if(0<=counter&&counter<6000){
+	if(0<=counter&&counter<counter_lim){
 			if(myTable(z)==null){
 			myTable(z) = new node(key,value,myTable(z))
 			last=myTable(z)
@@ -54,7 +55,7 @@ var hashSize=10007
 
 
 
-	}else if(6000<=counter&&counter<12000){
+	}else if(counter_lim<=counter&&counter<counter_lim*2){
 
 			if(myTable2(z)==null){
 			myTable2(z) = new node(key,value,myTable2(z))
@@ -71,7 +72,7 @@ var hashSize=10007
 		}
 
 
-	}else if(12000<=counter&&counter<18000){
+	}else if(counter_lim*2<=counter&&counter<counter_lim*3){
 
 			if(myTable3(z)==null){
 			myTable3(z) = new node(key,value,myTable3(z))
@@ -88,7 +89,7 @@ var hashSize=10007
 		}
 
 
-	}else if(18000<=counter){
+	}else if(counter_lim*3<=counter){
 
 			if(myTable4(z)==null){
 			myTable4(z) = new node(key,value,myTable4(z))
@@ -120,13 +121,13 @@ var hashSize=10007
 	 var z=index(key)
 	
 	if(myTable(z)==null){
-		if(counter<6000){
+		if(counter<counter_lim){
 		return null}else{
 		if(myTable2(z)==null){
-			if(counter<1200){
+			if(counter<counter_lim*2){
 			return null}else{
 			if(myTable3(z)==null){
-				if(counter<18000){
+				if(counter<counter_lim*3){
 				return null}else{
 				if(myTable4(z)==null){
 
