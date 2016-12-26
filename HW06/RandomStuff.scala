@@ -63,7 +63,7 @@ object RandomStuff extends RandomStuffTrait {
 			
 			case e: Exception => {
 				for(a<-1 to retryCount){
-					println(a)
+					
 					try{
 	   		 			Option(op)
 					}catch{
